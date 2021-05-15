@@ -31,7 +31,7 @@ terraform {
 # provider "google" {}
 
 provider "github" {
-  token = "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"
+  token = "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"
   owner = "jyotirmay123"
 }
 
