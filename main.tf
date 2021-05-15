@@ -85,6 +85,10 @@ resource "random_string" "toolz" {
   override_special = "!@#$%^&*(-_=+)"
 }
 
+data "github_actions_public_key" "public_key" {
+  repository = "terraform-docker-demo"
+}
+
 resource "github_actions_secret" "toolz_secret_key" {
   repository      = "terraform-docker-demo"
   secret_name     = "TOOLZ_SECRET_KEY"
