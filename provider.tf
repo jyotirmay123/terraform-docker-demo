@@ -10,30 +10,30 @@
 # provider "fakewebservices" {
 #   token = var.provider_token
 # }
+terraform {
+  required_providers {
+    # docker = {
+    #   source = "kreuzwerker/docker"
+    # }
+    # google = {
+    #   source  = "hashicorp/google"
+    #   version = "~> 3.50"
+    # }
+    github = {
+      source  = "integrations/github"
+      version = "~> 4.1"
+    }
+  }
+}
 
-# terraform {
-#   required_providers {
-#     # docker = {
-#     #   source = "kreuzwerker/docker"
-#     # }
-#     google = {
-#       source  = "hashicorp/google"
-#       version = "~> 3.50"
-#     }
-#     github = {
-#       source  = "hashicorp/github"
-#       version = "~> 4.1"
-#     }
-#   }
-# }
-
-# # provider "docker" {}
+# provider "docker" {}
 
 # provider "google" {}
 
-# provider "github" {
-#   owner = "jyotirmay123"
-# }
+provider "github" {
+  token = "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"
+  owner = "jyotirmay123"
+}
 
 # data "google_organization" "_7L" {
 #   domain = "7learnings.com"

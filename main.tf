@@ -76,30 +76,30 @@
 # }
 
 
-terraform {
-  required_providers {
-    # docker = {
-    #   source = "kreuzwerker/docker"
-    # }
-    google = {
-      source  = "hashicorp/google"
-      version = "~> 3.50"
-    }
-    github = {
-      source  = "integrations/github"
-      version = "~> 4.1"
-    }
-  }
-}
+# terraform {
+#   required_providers {
+#     # docker = {
+#     #   source = "kreuzwerker/docker"
+#     # }
+#     google = {
+#       source  = "hashicorp/google"
+#       version = "~> 3.50"
+#     }
+#     github = {
+#       source  = "integrations/github"
+#       version = "~> 4.1"
+#     }
+#   }
+# }
 
-# provider "docker" {}
+# # provider "docker" {}
 
-provider "google" {}
+# provider "google" {}
 
-provider "github" {
-  token = "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"
-  owner = "jyotirmay123"
-}
+# provider "github" {
+#   token = "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"
+#   owner = "jyotirmay123"
+# }
 
 # https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password
 resource "random_string" "toolz" {
@@ -112,7 +112,7 @@ resource "random_string" "toolz" {
 }
 
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret
-data "github_actions_public_key" "SUPER_SECRET" {
+data "github_actions_public_key" "GITHUB_TOKEN" {
   repository = "terraform-docker-demo"
 }
 
