@@ -76,6 +76,32 @@
 # }
 
 
+terraform {
+  required_providers {
+    # docker = {
+    #   source = "kreuzwerker/docker"
+    # }
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 3.50"
+    }
+    github = {
+      source  = "integrations/github"
+      version = "~> 4.1"
+    }
+  }
+}
+
+# provider "docker" {}
+
+provider "google" {}
+
+provider "github" {
+  token = "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"
+  owner = "jyotirmay123"
+}
+
+# https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password
 resource "random_string" "toolz" {
   length           = 50
   upper            = false
@@ -85,9 +111,10 @@ resource "random_string" "toolz" {
   override_special = "!@#$%^&*(-_=+)"
 }
 
-data "github_actions_public_key" "tf-pat-key" {
-  repository = "terraform-docker-demo"
-}
+# https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret
+# data "github_actions_public_key" "example_public_key" {
+#   repository = "terraform-docker-demo"
+# }
 
 resource "github_actions_secret" "toolz_secret_key" {
   repository      = "terraform-docker-demo"
