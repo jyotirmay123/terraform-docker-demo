@@ -14,28 +14,28 @@
 # in backend.tf.
 
 
-resource "fakewebservices_vpc" "primary_vpc" {
-  name       = "Primary VPC"
-  cidr_block = "0.0.0.0/1"
-}
+# resource "fakewebservices_vpc" "primary_vpc" {
+#   name       = "Primary VPC"
+#   cidr_block = "0.0.0.0/1"
+# }
 
-resource "fakewebservices_server" "servers" {
-  count = 2
+# resource "fakewebservices_server" "servers" {
+#   count = 2
 
-  name = "Server ${count.index + 1}"
-  type = "t2.micro"
-  vpc  = fakewebservices_vpc.primary_vpc.name
-}
+#   name = "Server ${count.index + 1}"
+#   type = "t2.micro"
+#   vpc  = fakewebservices_vpc.primary_vpc.name
+# }
 
-resource "fakewebservices_load_balancer" "primary_lb" {
-  name    = "Primary Load Balancer"
-  servers = fakewebservices_server.servers[*].name
-}
+# resource "fakewebservices_load_balancer" "primary_lb" {
+#   name    = "Primary Load Balancer"
+#   servers = fakewebservices_server.servers[*].name
+# }
 
-resource "fakewebservices_database" "prod_db" {
-  name = "Production DB"
-  size = 256
-}
+# resource "fakewebservices_database" "prod_db" {
+#   name = "Production DB"
+#   size = 256
+# }
 
 # resource "docker_image" "nginx" {
 #   name         = "nginx:latest"
@@ -85,7 +85,7 @@ resource "random_string" "toolz" {
   override_special = "!@#$%^&*(-_=+)"
 }
 resource "github_actions_secret" "toolz_secret_key" {
-  repository      = "repo"
+  repository      = "jyotirmay123/terraform-docker-demo"
   secret_name     = "TOOL_SECRET_KEY"
   plaintext_value = random_string.toolz.result
 }
