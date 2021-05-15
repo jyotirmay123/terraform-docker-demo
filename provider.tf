@@ -32,7 +32,7 @@ terraform {
 provider "google" {}
 
 provider "github" {
-  organization = "jyotirmay123"
+  owner = "jyotirmay123"
 }
 
 # data "google_organization" "_7L" {
