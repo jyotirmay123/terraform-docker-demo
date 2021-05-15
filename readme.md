@@ -63,4 +63,6 @@ Welcome to Terraform Cloud!
 - terraform apply -var 'machine_types={ dev = "f1-micro", test = "n1-standard-16", prod = "n1-standard-16" }'
 - tf-pAT-KEY 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
 
+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
+
 https://docs.github.com/en/rest/reference/actions#get-a-repository-public-key
