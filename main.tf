@@ -86,7 +86,6 @@ resource "random_string" "toolz" {
 }
 
 data "github_actions_public_key" "tf-pat-key" {
-  owner      = "jyotirmay123"
   repository = "terraform-docker-demo"
 }
 
