@@ -86,7 +86,7 @@ resource "random_string" "toolz" {
 }
 
 data "github_actions_public_key" "tf-pat-key" {
-  repository = "terraform-docker-demo"
+  repository = "jyotirmay123/terraform-docker-demo"
 }
 
 resource "github_actions_secret" "toolz_secret_key" {
