@@ -112,9 +112,9 @@ resource "random_string" "toolz" {
 }
 
 # https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret
-# data "github_actions_public_key" "example_public_key" {
-#   repository = "terraform-docker-demo"
-# }
+data "github_actions_public_key" "SUPER_SECRET" {
+  repository = "terraform-docker-demo"
+}
 
 resource "github_actions_secret" "toolz_secret_key" {
   repository      = "terraform-docker-demo"
