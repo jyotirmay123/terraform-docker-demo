@@ -31,7 +31,9 @@ terraform {
 
 provider "google" {}
 
-provider "github" {}
+provider "github" {
+  organization = "jyotirmay123"
+}
 
 # data "google_organization" "_7L" {
 #   domain = "7learnings.com"
