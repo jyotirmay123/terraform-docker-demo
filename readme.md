@@ -61,4 +61,4 @@ Welcome to Terraform Cloud!
 
 ## Assigning maps
 - terraform apply -var 'machine_types={ dev = "f1-micro", test = "n1-standard-16", prod = "n1-standard-16" }'
-- 
+- tf-pAT-KEY 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
